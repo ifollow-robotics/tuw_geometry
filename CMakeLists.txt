@@ -150,6 +150,9 @@ add_library(tuw_geometry
   src/${PROJECT_NAME}/linesegment2d.cpp
   src/${PROJECT_NAME}/linesegment2d_detector.cpp
   src/${PROJECT_NAME}/figure.cpp
+  src/${PROJECT_NAME}/measurement.cpp
+  src/${PROJECT_NAME}/measurement_laser.cpp
+  src/${PROJECT_NAME}/measurement_object.cpp
   src/${PROJECT_NAME}/tuw_geometry.cpp
   src/${PROJECT_NAME}/world_scoped_maps.cpp
   src/${PROJECT_NAME}/layered_maps.cpp
@@ -204,18 +207,18 @@ set_target_properties(tuw_geometry_wrapper PROPERTIES
 # )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS tuw_geometry tuw_geometry_wrapper
+# install(TARGETS tuw_geometry tuw_geometry_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+# )
 
 ## Mark cpp header files for installation
-install(DIRECTORY include/${PROJECT_NAME}/
-   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-   FILES_MATCHING PATTERN "*.h"
-   PATTERN ".svn" EXCLUDE
-)
+# install(DIRECTORY include/${PROJECT_NAME}/
+#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#   FILES_MATCHING PATTERN "*.h"
+#   PATTERN ".svn" EXCLUDE
+# )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
